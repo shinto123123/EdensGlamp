@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Appointment Website</title>
+  <link rel="stylesheet" href="home.css" >
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"><a href="home.html">Service Appointment Scheduler</a></div>
+    <nav class="nav-links">
+      <a href="#">Services</a>
+      <a href="#">Pricing</a>
+      <a href="#">About us</a>
+      <a href="#">Contact us</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="login">Log In</a>
+      <a href="signup.html" class="signup">Sign Up</a>
+    </div>
+  </header>
+
+  <section>
+    <img src="Home-Appliances.jpg" alt="Home Appliances" class="home-appliances">
+  </section>
+
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Service<br>Appointment Scheduling</h1>
+      <p>
+        Register Complaints, improve your services, 24/7 online booking, client reminders.
+      </p>
+      <blockquote style="font-style: italic; color: #4c8bf5; margin-bottom: 18px;">
+    "Service your home appliances now"
+  </blockquote>
+      <a href="signup.html" class="btn-primary">Register your Complaint </a>
+    </div>
+    <div class="hero-image">
+      <img src="0d42f8cc22e69b42e704ca297cde37fe.jpg" alt="App Interface" />
+    </div>
+  </section>
+
+
+
+ <section class="services">
+  <h1>Our Services</h1>
+  <div class="services-list">
+    <div class="service-card">
+      <img src="ac_repair.jpeg" alt="AC" class="service-icon">
+      <h3>AC Repair</h3>
+      <p>Expert air conditioner servicing and repairs.</p>
+    </div>
+    <div class="service-card">
+      <img src="fridge_repair.jpeg" alt="Fridge" class="service-icon">
+      <h3>Fridge Service</h3>
+      <p>Professional refrigerator repair and maintenance.</p>
+    </div>
+    <div class="service-card">
+      <img src="washingmachine_repair.jpeg" alt="Washing Machine" class="service-icon">
+      <h3>Washing Machine</h3>
+      <p>Quick and reliable washing machine service.</p>
+    </div>
+    <div class="service-card">
+      <img src="tv_repair.jpeg" alt="TV" class="service-icon">
+      <h3>TV Repair</h3>
+      <p>LED, LCD, and Smart TV repairs by experts.</p>
+    </div>
+    <div class="service-card">
+      <img src="fan_repair.jpeg" alt="Fan" class="service-icon">
+      <h3>Fan Service</h3>
+      <p>Ceiling and table fan repair and maintenance.</p>
+    </div>
+    <div class="service-card">
+      <img src="light_repair.jpeg" alt="Lights" class="service-icon">
+      <h3>Lights</h3>
+      <p>Lighting installation and troubleshooting.</p>
+    </div>
+    <div class="service-card">
+      <img src="speaker_repair.jpg" alt="Speaker" class="service-icon">
+      <h3>Speaker Service</h3>
+      <p>Speaker setup and repair services.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="company-details">
+  <div class="company-details-inner">
+    <img src="company_logo.jpg" alt="Company Logo" class="company-logo">
+    <h2>About Our Company</h2>
+    <p>
+      <span class="highlight">Service Appointment Scheduler</span> is your trusted partner for all home appliance repairs and maintenance.
+      With <b>years of experience</b> and a team of <b>certified professionals</b>, we ensure quick, reliable, and affordable services for your comfort and convenience.
+    </p>
+    <div class="company-features">
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Certified" />
+        <span>Certified Technicians</span>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="24/7" />
+        <span>24/7 Online Booking</span>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190406.png" alt="Satisfaction" />
+        <span>Customer Satisfaction</span>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Transparent Pricing" />
+        <span>Transparent Pricing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+/*footer section*/
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="company_logo.jpg" alt="Company Logo" />
+      <span>Service Appointment Scheduler</span>
+    </div>
+    <div class="footer-links">
+      <a href="home.html">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About us</a>
+      <a href="#">Contact us</a>
+    </div>
+    <div class="footer-contact">
+      <span><strong>Email:</strong> support@serviceapp.com</span>
+      <span><strong>Phone:</strong> +91 12345 67890</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Service Appointment Scheduler. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.service-card');
+    const companySection = document.querySelector('.company-details');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+    if (companySection) observer.observe(companySection);
+  });
+</script>
+
+
+
+</body>
+</html>
