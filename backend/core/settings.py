@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=os.environ.get("psql 'postgresql://neondb_owner:****************@ep-orange-sunset-a1jad32i-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'")
+        default=os.environ.get('postgresql://neondb_owner:****************@ep-orange-sunset-a1jad32i-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require')
     )
 }
 
